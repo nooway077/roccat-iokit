@@ -1,10 +1,6 @@
 #ifndef ROCCAT_DRIVER_H_
 #define ROCCAT_DRIVER_H_
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-
 #include <IOKit/IOKitLib.h>
 #include <IOKit/IOCFPlugIn.h>
 #include <IOKit/usb/IOUSBLib.h>
