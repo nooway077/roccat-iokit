@@ -1,6 +1,6 @@
 #include "iodev.h"
 
-IOUSBDeviceInterface **getIOUSBDeviceInterface(unsigned char vId, unsigned char pdId)
+IOUSBDeviceInterface **getIOUSBDeviceInterface(UInt16 vId, UInt16 pdId)
 {
     CFMutableDictionaryRef matchingDict;
 	matchingDict = IOServiceMatching(kIOUSBDeviceClassName);
