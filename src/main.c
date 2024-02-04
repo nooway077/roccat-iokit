@@ -46,7 +46,10 @@ int main(int argc, char *argv[])
            return -1;
         }
 
-        IOUSBDeviceInterface **dev = getIOUSBDeviceInterface(USB_VENDOR_ID, USB_DEVICE_ID);
+        UInt16 vId = getVendorId();
+        UInt16 pId = getProductId();
+
+        IOUSBDeviceInterface **dev = getIOUSBDeviceInterface(vId, pId);
         printf("Looking for compatible usb device ...\n");
 
         if (dev == NULL)
