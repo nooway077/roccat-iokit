@@ -1,7 +1,7 @@
 # ROCCAT-IOKIT
 At the time of writing this, Roccat didn't have any software for MacOS so  I decided to create something 
 from scratch which could enable me to change some settings of the mouse when I don't have a PC around. The
-functionality of this repo is pretty basic, but it is aimed to help getting started of writing drivers for
+functionality of this repo is pretty basic, but it is aimed to help getting started with writing drivers for
 unspecified usb devices from scratch.
 
 ## Table of contents
@@ -113,8 +113,7 @@ When comparing the **payload** of the two captured frames side by side, we can n
 In the **Roccat Swarm** app, the brightness is set by percentage and it is from **0 to 100** which is in decimal. In USB payloads these are mostly **hexadecimal** values which means it will be **from 0 to 255.** Since we set the brightness to **100 percent** in the second payload, that is **0xff** in **hexadecimal**. Now we have successfully identified the **byte** that is controlling the brightness of the leds on the device. The last two bytes of the payload are always different, even when nothing is changed in the app which means they are probably used for **Cyclic Redundancy Check**.
 
 Now that we know which byte changes the brightness, we could create a structure to define the payload and then change that
-byte to something else and send that to the device to see if it works. You will find a preconfigured header file for the
-**Kone AIMO Remastered** mouse which you could use as template when reverse-engineering your own device.
+byte to something else and send that to the device to see if it works. You will find a preconfigured header file in the `include/device` directory for the **Kone AIMO Remastered** mouse which you can use as template when reverse-engineering your own device.
 
 
 
