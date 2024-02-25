@@ -11,7 +11,7 @@ IOUSBDeviceInterface **getIOUSBDeviceInterface(UInt16 vId, UInt16 pdId)
 
     io_iterator_t iter;
 	kern_return_t kReturn =
-		IOServiceGetMatchingServices(kIOMasterPortDefault, matchingDict, &iter);
+		IOServiceGetMatchingServices(kIOMainPortDefault, matchingDict, &iter);
 	if (kReturn != kIOReturnSuccess)
 	{
 		return NULL;

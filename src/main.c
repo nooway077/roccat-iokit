@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
         printf("Device found\n");
         
         set_illumination_brightness_and_color_all(dev, brightness, color_intensity, red, green, blue );
-        printf("Set brighness: %d color_intensity: %d red: %d green: %d blue: %d\n", brightness, color_intensity, red, green, blue);
+        printf("Set brighness: %d intensity: %d red: %d green: %d blue: %d\n", brightness, color_intensity, red, green, blue);
 
         printf("Closing connection ...\n");
         closeIOUSBDeviceInterface(dev);
