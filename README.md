@@ -12,7 +12,7 @@ Simple CLI based tool to configure some settings of **Roccat** devices utilizing
 
 ## Prerequisites
 The tool was tested on **MacOS Ventura 13.6.1**. You will need to have **git**, **gcc** and **make** installed.
-I used the ones provided by **homebrew**: `brew install git, gcc, make`. A **Windows PC or a VM** will be needed to run the official software of the examined device you are reverse-engineering.
+I used the ones provided by **homebrew**: `brew install git gcc make`. A **Windows PC or a VM** will be needed to run the official software of the examined device you are reverse-engineering.
 
 ## Usage
 
